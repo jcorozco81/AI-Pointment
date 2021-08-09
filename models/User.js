@@ -35,6 +35,18 @@ User.init(
         len: [8],
       },
     },
+    car_make: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    car_model: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    car_year: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
   },
   {
     // hooks: {
