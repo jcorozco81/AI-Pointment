@@ -1,0 +1,42 @@
+[
+  {
+    "id": 10,
+    "timestring": "7:00"
+  },
+  {
+    "id": 20,
+    "timestring": "8:00"
+  },
+  {
+    "id": 30,
+    "timestring": "9:00"
+  },
+  {
+    "id": 40,
+    "timestring": "10:00"
+  },
+  {
+    "id": 50,
+    "timestring": "11:00"
+  },
+  {
+    "id": 60,
+    "timestring": "12:00"
+  },
+  {
+    "id": 70,
+    "timestring": "13:00"
+  },
+  {
+    "id": 80,
+    "timestring": "14:00"
+  },
+  {
+    "id": 90,
+    "timestring": "15:00"
+  },
+  {
+    "id": 100,
+    "timestring": "16:00"
+  }
+]
