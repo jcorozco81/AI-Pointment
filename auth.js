@@ -47,3 +47,8 @@ router.post('/new', async (req, res) => {
         });
     });
 });
+
+router.post('/logout', async (req, res) => {
+    req.session.destroy();
+    res.redirect('/');
+});
