@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Juan",
+    "email": "juan@hotmail.com",
+    "password": "password12345",
+    "car_make": "Toyota",
+    "car_model": "Corolla",
+    "car_year": 2016
+  },
+  {
+    "id": 2,
+    "name": "Ethan",
+    "email": "ethan@gmail.com",
+    "password": "password12345",
+    "car_make": "Ford",
+    "car_model": "Explorer",
+    "car_year": 2017
+  },
+  {
+    "id": 3,
+    "name": "Bernie",
+    "email": "bernie@aol.com",
+    "password": "password12345",
+    "car_make": "Honda",
+    "car_model": "Odyssey",
+    "car_year": 2015
+  },
+  {
+  "id": 4,
+  "name": "Anam",
+  "email": "anam@facebook.com",
+  "password": "password12345",
+  "car_make": "Subaru",
+  "car_model": "Impreza",
+  "car_year": 2021
+  }
+]
