@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Car Diagnostic",
+    "description": "Multi-point inspection, computer reader",
+    "cost": 80.00
+  },
+  {
+    "id": 2,
+    "name": "Scheduled Maintenance",
+    "description": "Oil and Filter Change per manufacturer recommendation.",
+    "cost": 60.00
+  },
+  {
+    "id": 3,
+    "name": "Tire Service",
+    "description": "Tire balancing, rotation",
+    "cost": 50.00
+  },
+  {
+    "id": 4,
+    "name": "Brake Service",
+    "description": "Check Brake pads/Liners, Brake discs/Drums, and replace if worn out",
+    "cost": 400.00
+  },
+  {
+    "id": 5,
+    "name": "Battery Replacement",
+    "description": "Check battery condition, replace as required",
+    "cost": 150.00
+  }
+]
