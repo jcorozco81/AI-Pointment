@@ -2,7 +2,7 @@ require('dotenv').config();
 
 const app = require('./app');
 const path = require('path');
-const routes = require('./controllers');
+// const routes = require('./controllers');
 
 
 // Sequelize
@@ -17,7 +17,7 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 
-app.use(routes);
+// app.use(routes);
 
 
 

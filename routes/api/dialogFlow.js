@@ -1,7 +1,7 @@
 const router = require('express').Router();
-const dialogFlowRouter = ('./../../controllers/dialogFlow.js');
+// const dialogFlowRouter = ('./../../controllers/dialogFlow.js');
 
-router.post('/', dialogFlowRouter.message);
+// router.post('/', dialogFlowRouter.message);
 
 
 module.exports = router;
