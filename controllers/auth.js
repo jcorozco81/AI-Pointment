@@ -1,5 +1,6 @@
 const bcrypt = require('bcrypt');
-const { router } = require('./app');
+const router = require('../app');
+const User = require('../models');
 
 exports.logIn = (async (req, res) => {
     let user = req.body;

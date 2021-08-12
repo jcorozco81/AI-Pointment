@@ -1,5 +1,6 @@
 const bcrypt = require('bcrypt');
 const { router } = require('./app');
+const { User } = require('../../models');
 
 router.post('/', async (req, res) => {
     let user = req.body;
@@ -30,6 +31,9 @@ router.post('/', async (req, res) => {
         res.redirect('/login');
     }
 });
+
+
+
 
 router.post('/new', async (req, res) => {
     let user = req.body;
