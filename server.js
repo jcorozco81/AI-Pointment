@@ -18,11 +18,10 @@ app.set('view engine', 'handlebars');
 
 
 
-
 //START SERVER
 const port = process.env.PORT || 4000;
 
 
 sequelize.sync({ force: false }).then(() => {
-app.listen(port, () => console.log(`App running on port ${port}...`));
+    app.listen(port, () => console.log(`App running on port ${port}...`));
 });
