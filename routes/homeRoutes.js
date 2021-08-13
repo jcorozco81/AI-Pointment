@@ -2,8 +2,9 @@ const router = require('express').Router();
 
 
 router.get('/', async (req, res) => {
-    res.render('homepage');
-  });
+  res.render('homepage');
+});
+
 
   router.get('/profile', async (req, res) => {
     res.render('profile');
@@ -14,6 +15,14 @@ router.get('/', async (req, res) => {
   });
 
 
-  module.exports = router;
+
 
   
+
+router.get('/message-test', async (req, res) => {
+  res.render('messageTest');
+});
+
+
+module.exports = router;
+

@@ -1,8 +1,8 @@
 const bcrypt = require('bcrypt');
-const { router } = require('./app');
-const { User } = require('../../models');
+const router = require('../app');
+const User = require('../models');
 
-router.post('/', async (req, res) => {
+exports.logIn = (async (req, res) => {
     let user = req.body;
     let db_user = await User.findAll({
         where: {
@@ -32,10 +32,7 @@ router.post('/', async (req, res) => {
     }
 });
 
-
-
-
-router.post('/new', async (req, res) => {
+exports.signUp = (async (req, res) => {
     let user = req.body;
     let password = user.password;
 
@@ -52,7 +49,7 @@ router.post('/new', async (req, res) => {
     });
 });
 
-router.post('/logout', async (req, res) => {
+exports.logOut = (async (req, res) => {
     req.session.destroy();
     res.redirect('/');
 });
