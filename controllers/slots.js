@@ -1,6 +1,6 @@
 // All through http://localhost:4000/controller/slots-routes
 
-const router = require('express').Router();
+// const router = require('express').Router();
 const { Slots , User, Timeid, Service } = require('../models');
 
 // Post: Create a new appointment
@@ -96,4 +96,4 @@ if (!slotsData){
 
 
 
-module.exports = router;
+// module.exports = router;
