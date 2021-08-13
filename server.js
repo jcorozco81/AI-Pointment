@@ -2,7 +2,11 @@ require('dotenv').config();
 
 const app = require('./app');
 const path = require('path');
+
+
+
 const exphbs = require('express-handlebars');
+
 
 
 // Sequelize
@@ -14,6 +18,11 @@ const hbs = exphbs.create({});
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
+
+
+
+
+
 
 
 
