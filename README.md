@@ -10,7 +10,7 @@ There is also a User Profile, where the user can add important information about
  ## Table of Contents:
   * [Description](#Description)
   * [Installation](#Installation)
-  * [TechnologiesUsed](#TechnologiesUsed)
+  * [Technologies Used](#TechnologiesUsed)
   * [Credits](#Credits)
   * [License](#License)
 ## Installation:
