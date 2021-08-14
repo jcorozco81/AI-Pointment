@@ -5,6 +5,8 @@
     "last_name": "Orozco",
     "email": "juan@hotmail.com",
     "password": "password12345",
+    "phone": "",
+    "address":"",
     "car_make": "Toyota",
     "car_model": "Corolla",
     "car_year": 2016
@@ -15,6 +17,8 @@
     "last_name": "Harsh",
     "email": "ethan@gmail.com",
     "password": "password12345",
+    "phone": "",
+    "address":"",
     "car_make": "Ford",
     "car_model": "Explorer",
     "car_year": 2017
@@ -25,6 +29,8 @@
     "last_name": "McKnight",
     "email": "bernie@aol.com",
     "password": "password12345",
+    "phone": "",
+    "address":"",
     "car_make": "Honda",
     "car_model": "Odyssey",
     "car_year": 2015
@@ -35,6 +41,8 @@
   "last_name": "Brazik",
   "email": "anam@facebook.com",
   "password": "password12345",
+  "phone": "",
+  "address":"",
   "car_make": "Subaru",
   "car_model": "Impreza",
   "car_year": 2021
