@@ -1,6 +1,9 @@
 const bcrypt = require('bcrypt');
+const saltRounds = 10;
 const router = require('../app');
-const User = require('../models');
+const { User } = require('../models');
+
+
 
 exports.logIn = (async (req, res) => {
     let user = req.body;
@@ -23,6 +26,7 @@ exports.logIn = (async (req, res) => {
                     req.session.loggedIn = true;
                     req.session.username = user.email
                     res.redirect('/');
+                    console.log("logged in");
 
                 }
             }
@@ -38,18 +42,21 @@ exports.signUp = (async (req, res) => {
 
     bcrypt.genSalt(10, function (err, salt) {
         bcrypt.hash(password, salt, function (err, hash) {
-            // Store hash in your password DB.
             user.password = hash;
+            let base = User.create(user);
             var hour = 3600000;
             req.session.cookie.maxAge = 14 * 24 * hour;
             req.session.loggedIn = true;
             req.session.username = user.email
             res.redirect('/');
+            console.log("new user");
         });
     });
 });
 
+
 exports.logOut = (async (req, res) => {
     req.session.destroy();
     res.redirect('/');
+    console.log("logged out");
 });
