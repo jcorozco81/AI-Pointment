@@ -38,17 +38,25 @@ User.init(
         len: [8],
       },
     },
+    phone: {
+type: DataTypes.INTEGER,
+      allowNull: true,
+    },
+    address: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
     car_make: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     car_model: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     car_year: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
     },
   },
   {
