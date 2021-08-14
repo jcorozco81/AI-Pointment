@@ -42,6 +42,14 @@ User.init(
         len: [8],
       },
     },
+    phone: {
+type: DataTypes.INTEGER,
+      allowNull: true,
+    },
+    address: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
     car_make: {
       type: DataTypes.STRING,
       allowNull: true,
