@@ -43,7 +43,7 @@ User.init(
       },
     },
     phone: {
-type: DataTypes.INTEGER,
+type: DataTypes.STRING,
       allowNull: true,
     },
     address: {
