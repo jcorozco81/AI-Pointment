@@ -19,7 +19,11 @@ User.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    first_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    last_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -40,15 +44,15 @@ User.init(
     },
     car_make: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     car_model: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     car_year: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
     },
   },
   {
