@@ -1,4 +1,6 @@
 const router = require('express').Router();
+// const userControllerRoute = require('../controllers/user');
+const { User } = require('../models');
 
 
 router.get('/', async (req, res) => {
@@ -7,8 +9,27 @@ router.get('/', async (req, res) => {
 
 
   router.get('/profile', async (req, res) => {
-    res.render('profile');
+    try {
+      // Find the logged in user based on the session ID
+      const userData = await User.findByPk(1);
+  
+      const user = userData.get({ plain: true });
+      console.log(user);
+  
+      res.render('profile', {
+        ...user});
+    } catch (err) {
+      res.status(500).json(err);
+    }
   });
+
+
+
+
+
+
+
+
 
   router.get('/signup', async (req, res) => {
     res.render('signup');
