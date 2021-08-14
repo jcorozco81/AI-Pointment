@@ -32,9 +32,6 @@ router.post('/', async (req, res) => {
     }
 });
 
-
-
-
 router.post('/new', async (req, res) => {
     let user = req.body;
     let password = user.password;
