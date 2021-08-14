@@ -1,11 +1,12 @@
-// All through http://localhost:4000/controller/slots-routes
-
+const catchAsync = require('../utils/catchAsync');
 // const router = require('express').Router();
 const { Slots , User, Timeid, Service } = require('../models');
 
 // Post: Create a new appointment
 
-router.post('/', async (req, res) => {
+// router.post('/', 
+
+exports.postAppointment = catchAsync(async (req, res) => {
     try {
       const slotsData = await Slots.create(req.body);
    
@@ -17,7 +18,8 @@ router.post('/', async (req, res) => {
   });
 
     // Get all Slots
-  router.get('/', async (req, res) => {
+  // router.get('/', 
+  exports.getAllAppointment = catchAsync(async (req, res) => {
     try {
       const slotsData = await Slots.findAll(
         {include: [{ model: Timeid }, { model: Service }], 
@@ -30,7 +32,10 @@ router.post('/', async (req, res) => {
     }
   });
 
-  router.get('/date', async (req, res) => {
+  // Get Slots by date
+
+  // router.get('/by-date', 
+  exports.getAppointmentByDate = catchAsync(async (req, res) => {
     try {
       const slotsData = await Slots.findAll({
         where: {
@@ -43,23 +48,28 @@ router.post('/', async (req, res) => {
     }
   });
 
-  router.get('/date', async (req, res) => {
-    try {
-      const slotsData = await Slots.findAll({
-        where: {
-            date: req.body.date
-          }
-         } );
-      res.status(200).json(slotsData);
-    } catch (err) {
-      res.status(500).json(err);
-    }
-  });
+    // Get Slots by date
+
+  // router.get('/by-user', 
+  // exports.getAppointmentByUser = catchAsync(async (req, res) => {
+  //   try {
+  //     const slotsData = await Slots.findAll({
+  //       where: {
+  //           date: req.body.date
+  //         }
+  //        } );
+  //     res.status(200).json(slotsData);
+  //   } catch (err) {
+  //     res.status(500).json(err);
+  //   }
+  // });
 
 
 
 // Get Slot by specific ID
-  router.get('/slot/:id', async (req, res) => {
+  // router.get('/:id', 
+  
+  exports.getAppointmentById = catchAsync(async (req, res) => {
     try {
       const slotsData = await Slots.findByPk(req.params.id);
       res.status(200).json(slotsData);
@@ -72,7 +82,8 @@ if (!slotsData){
   });
 
 //   Modify user
-  router.put('/:id', async (req, res) => {
+  // router.put('/:id', 
+  exports.putAppointment = catchAsync(async (req, res) => {
     try {
       const slotsData = await Slots.update(req.body,{
         where: {
