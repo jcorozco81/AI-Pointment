@@ -2,6 +2,44 @@
 
 <!-- Chatbot Chatbox -->
 <div class="container"> 
+  <div id="message-box" class="card-panel teal lighten-7 grid-example col s12">
+    <div id="welcome-message" class="card-panel teal lighten-5 grid-example col s12 center">
+      <strong>Thank you for choosing AI-Pointment's scheduling system!</strong> Please send us a message when you're ready to begin.
+    </div>
+  </div>
+</div>
+<!-- Text area to type in messages to chatbot -->
+<div class="container"> 
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+            <i class="material-icons prefix">mode_edit</i>
+            <input placeholder="Message" class="materialize-textarea" id="message" type="text">
+            <button class="btn waves-effect waves-light right" id="sub">
+              Submit 
+              <i class="material-icons right">send</i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div> 
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script src="/js/messageTest.js"></script>
+
+
+{{!-- <h1>Homepage</h1>
+
+<!-- Chatbot Chatbox -->
+<div class="container"> 
 <div class="card-panel teal lighten-7 grid-example col s12">
 <div id="msg1" class="card-panel teal lighten-5 grid-example col s12"> 
     chatbot example message here
@@ -30,4 +68,4 @@
         </form>
       </div> 
 </div>
-</div>
+</div> --}}
