@@ -1,7 +1,7 @@
  <div class="container">
         <div class="card-panel teal lighten-7 grid-example">
             <div class="row">
-                <form class="col s12 login-form" method="POST" action="/api/v1/auth/login/">
+                <form class="col s12 login-form">
                     <div class="row">
                         <h4>Log In</h4>
                         <!-- -Text Area to Input Existing User Email -->
@@ -15,12 +15,15 @@
                             <input id="password-login" type="text" class="validate" placeholder="Password" />
                         </div>
                     </div>
+                    <button class="btn waves-effect waves-light login-form" type="submit" name="action">Submit
+                        <i class="material-icons right ">send</i>
+                    </button>
                 </form>
             </div>
             <!-- Send button -->
-            <button class="btn waves-effect waves-light login-form" type="submit" name="action">Submit
-                <i class="material-icons right ">send</i>
-            </button>
+
         </div>
         <a href="/signup">No registered? Sign-up instead.</p>
     </div>
+
+    <script src="../js/login.js"></script>
