@@ -1,4 +1,3 @@
-// All through http://localhost:4000/controller/user-routes
 const catchAsync = require('../utils/catchAsync');
 // const router = require('express').Router();
 const { User } = require('../models');
