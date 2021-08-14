@@ -10,7 +10,7 @@ There is also a User Profile, where the user can add important information about
  ## Table of Contents:
   * [Description](#Description)
   * [Installation](#Installation)
-  * [Technologies](#Technologies Used)
+  * [Technologies Used](#Technologies Used)
   * [Credits](#Credits)
   * [License](#License)
 ## Installation:
@@ -26,9 +26,9 @@ npm start
 - Google Cloud
 - Handlerbars
 ## Credits:
-Ethan Harsh [Github](https://github.com/EthanHarsh).
-Juan Orozco [Github](https://github.com/jcorozco81).
-Bernie McKnight [Github](https://github.com/sissyhanks).
-Anam Brazik [Github](https://github.com/abrazik).
+- Ethan Harsh [Github](https://github.com/EthanHarsh).
+- Juan Orozco [Github](https://github.com/jcorozco81).
+- Bernie McKnight [Github](https://github.com/sissyhanks).
+- Anam Brazik [Github](https://github.com/abrazik).
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
