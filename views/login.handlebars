@@ -1,0 +1,26 @@
+ <div class="container">
+        <div class="card-panel teal lighten-7 grid-example">
+            <div class="row">
+                <form class="col s12 login-form" method="POST" action="/api/v1/auth/login/">
+                    <div class="row">
+                        <h4>Log In</h4>
+                        <!-- -Text Area to Input Existing User Email -->
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">mail_outline</i>
+                            <input id="email-login" type="text" class="validate" placeholder="Email" />
+                        </div>
+                        <!-- -Text Area to Input Existing User Password -->
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">check_circle_outline</i>
+                            <input id="password-login" type="text" class="validate" placeholder="Password" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- Send button -->
+            <button class="btn waves-effect waves-light login-form" type="submit" name="action">Submit
+                <i class="material-icons right ">send</i>
+            </button>
+        </div>
+        <a href="/signup">No registered? Sign-up instead.</p>
+    </div>
