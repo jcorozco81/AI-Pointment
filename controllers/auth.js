@@ -25,6 +25,7 @@ exports.logIn = (async (req, res) => {
                     req.session.cookie.maxAge = 14 * 24 * hour;
                     req.session.loggedIn = true;
                     req.session.username = user.email
+                    req.session.userid = db_user.id;
                     res.redirect('/');
                     console.log("logged in");
 
@@ -44,11 +45,11 @@ exports.signUp = (async (req, res) => {
         bcrypt.hash(password, salt, function (err, hash) {
             user.password = hash;
             let base = User.create(user);
-            var hour = 3600000;
-            req.session.cookie.maxAge = 14 * 24 * hour;
-            req.session.loggedIn = true;
-            req.session.username = user.email
-            res.redirect('/');
+            // var hour = 3600000;
+            // req.session.cookie.maxAge = 14 * 24 * hour;
+            // req.session.loggedIn = false;
+            // req.session.username = user.email
+            res.redirect('/login');
             console.log("new user");
         });
     });

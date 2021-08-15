@@ -23,7 +23,13 @@
         <div class="nav-wrapper teal lighten-7">
           <a href="/" class="brand-logo">AI-Pointment</a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <button id="logout" class="btn-no-style">logout</button>
+            {{!-- <button id="logout" class="btn-no-style">logout</button> --}}
+                    {{#if loggedIn}}
+        <a href="/profile">profile</a> |
+        <button class="no-button" id="logout">logout</button>
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}}
           </ul>
         </div>
       </nav>
