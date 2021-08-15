@@ -25,6 +25,38 @@
       </div>
     </form>
   </div> 
+  <div class="row">
+    <div class="col s12">
+      <form>
+        <div class="input-field col s12">
+          <input placeholder="Date" class="materialize-textarea" id="dateSlot" type="date">
+          <label>Pick a Date</label>
+        </div>
+        <div class="input-field col s12">
+          <select id="selectTime">
+            <option value="" disabled selected>Choose your Time</option>
+          </select>
+          <label>Select Time</label>
+        </div>
+        <div class="input-field col s12">
+          <input placeholder="Car Make/Model/Year" class="materialize-textarea" id="carMake" type="text">
+          <label>Car Year/Make/Model</label>
+        </div>
+        <div class="input-field col s12">
+          <select id="selectService">
+            <option value="" disabled selected>Choose your Service</option>
+          </select>
+          <label>Select Service</label>
+        </div>
+
+        <input placeholder="Car Make/Model/Year" class="materialize-textarea" id="userID" type="hidden">
+        <button class="btn waves-effect waves-light right" id="submit-appointment">
+              Submit 
+              <i class="material-icons right">send</i>
+            </button>
+      </form>
+    </div>
+  </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -34,38 +66,3 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 <script src="/js/messageTest.js"></script>
-
-
-{{!-- <h1>Homepage</h1>
-
-<!-- Chatbot Chatbox -->
-<div class="container"> 
-<div class="card-panel teal lighten-7 grid-example col s12">
-<div id="msg1" class="card-panel teal lighten-5 grid-example col s12"> 
-    chatbot example message here
-</div>
-<div id="msg2" class="card-panel teal lighten-2 grid-example col s12"> 
-   user response will displays here
-</div>
-<div id="msg3" class="card-panel teal lighten-5 grid-example col s12"> 
-    chatbox response will display here
-</div>
-</div> 
-<!-- Text area to type in messages to chatbot -->
-<div class="container"> 
-    <div class="row">
-        <form class="col s12">
-          <div class="row">
-            <div class="input-field col s12">
-              <i class="material-icons prefix">mode_edit</i>
-              <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-              <label for="icon_prefix2">Enter Message Here</label>
-<!-- Send button -->
-              <button class="btn waves-effect waves-light right" type="submit" name="action">Submit
-                <i class="material-icons right">send</i></button>
-            </div>
-          </div>
-        </form>
-      </div> 
-</div>
-</div> --}}
