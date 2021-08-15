@@ -2,6 +2,7 @@ console.log("loaded signup");
 
 const updateUserInfo = async (event) => {
   event.preventDefault();
+  const id = event.target.getAttribute('user-id');
   console.log("You clicked me!");
   
 
@@ -27,9 +28,10 @@ const updateUserInfo = async (event) => {
   const car_year = parseInt(year);
   console.log(car_year);
 
-  if (first_name && last_name && phone && address && car_make && car_model && car_year) {
+  // (first_name && last_name && phone && address && car_make && car_model && car_year) {
+      console.log(id);
     
-    const response = await fetch(`/api/v1/user/9`, {
+    const response = await fetch(`/api/v1/user/${id}`, {
       method: 'PUT',
       body: JSON.stringify({ first_name, last_name, phone, address, car_make, car_model, car_year }),
       headers: { 'Content-Type': 'application/json' },
@@ -41,11 +43,11 @@ const updateUserInfo = async (event) => {
       alert("Test"+response.statusText);
     }
   }
-};
+// };
 
-// window.onload = function(){
-// console.log("loaded function signup");
+window.onload = function(){
+console.log("loaded function signup");
   document
   .querySelector("#update-info")
   .addEventListener("click", updateUserInfo);
-// }
+}
