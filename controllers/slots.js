@@ -48,21 +48,25 @@ exports.postAppointment = catchAsync(async (req, res) => {
     }
   });
 
-    // Get Slots by date
+    // Get Slots by user
 
   // router.get('/by-name', 
-  // exports.getAppointmentByUser = catchAsync(async (req, res) => {
-  //   try {
-  //     const slotsData = await Slots.findAll({
-  //       where: {
-  //           first_name: first_name.body.date
-  //         }
-  //        } );
-  //     res.status(200).json(slotsData);
-  //   } catch (err) {
-  //     res.status(500).json(err);
-  //   }
-  // });
+  exports.getAppointmentByUser = catchAsync(async (req, res) => {
+    try {
+      const slotsData = await Slots.findAll({
+        where: {
+            user_id: req.body.id
+          }
+          
+         }, 
+         {include: [{ model: Timeid }, { model: Service }], 
+            attributes: { exclude: ['time_id', 'service_id'] }
+          });
+      res.status(200).json(slotsData);
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
 
 
 
