@@ -1,7 +1,8 @@
 const router = require('express').Router();
 // const userControllerRoute = require('../controllers/user');
-const { User } = require('../models');
+const { User, Slots, Service, Timeid } = require('../models');
 const withAuth = require('../utils/auth');
+const getAppointmentByUser = require('../controllers/slots');
 
 
 
@@ -22,13 +23,28 @@ router.get('/profile', withAuth, async (req, res) => {
 
     // Find the logged in user based on the session ID
     
-    const userData = await User.findByPk(req.session.userid);
+    // const userData = await User.findByPk(req.session.userid,
+    //   {attributes: { exclude: ['password'] },
+    //   include: [ { model: Slots }, include: [ { model: Timeid }] ],});
+
+    const userData = await Slots.findAll({
+        where: {
+            user_id: req.session.userid,
+          },},
+          {include: [{ model: User }, { model: Slots }, { model: Timeid }]}
+          
+    //      }, 
+    //      {include: [{ model: Timeid }, { model: Service }], 
+    //         attributes: { exclude: ['time_id', 'service_id'] }
+          );
 
     const user = userData.get({ plain: true });
+    // const slots = slotData.get({ plain: true });
     console.log(user);
+    // console.log(slots);
 
     res.render('profile', {
-      ...user,
+      ...user, 
       loggedIn: req.session.loggedIn
     });
   } catch (err) {
