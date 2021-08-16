@@ -80,7 +80,6 @@ form {
      overflow-y:scroll;
        -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
-    justify-content: flex-end;
 }
 
 .middle-box::-webkit-scrollbar {
