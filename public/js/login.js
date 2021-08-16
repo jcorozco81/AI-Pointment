@@ -1,5 +1,6 @@
 console.log("loaded login");
-
+$('#nav-login').addClass('hide');
+$('#nav-signup').removeClass('hide');
 
 const loginFormHandler = async (event) => {
     event.preventDefault();

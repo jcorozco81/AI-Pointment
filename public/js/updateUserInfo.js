@@ -47,7 +47,7 @@ const updateUserInfo = async (event) => {
   const id = event.target.getAttribute('user-id');
   console.log(id);
   //console.log("You clicked me!");
-  $('#user-update').empty().append(`<h1 class="info-heading">User Info</h1>`).append(loader);
+
 
   const first_name = $('#first_name').val();
   //console.log(first_name);
@@ -59,6 +59,8 @@ const updateUserInfo = async (event) => {
   //console.log(phone);
 
   const address = $('#address').val();
+
+  $('#user-update').empty().append(`<h1 class="info-heading">User Info</h1>`).append(loader);
   //console.log(address);
   const response = await fetch(`/api/v1/user/${id}`, {
     method: 'PUT',
@@ -79,8 +81,6 @@ const updateCarInfo = async (event) => {
   event.preventDefault();
   const id = event.target.getAttribute('user-id');
   //console.log(car_make);
-  $('#car-update').empty().append(`<h1 class="info-heading">Car Info</h1>`).append(loader);
-
   const car_make = $('#make').val();
   const car_model = $('#model').val();
   //console.log(car_model);
@@ -88,8 +88,13 @@ const updateCarInfo = async (event) => {
   const year = $('#year').val();
   const car_year = parseInt(year);
   //console.log(car_year);
+  $('#car-update').empty().append(`<h1 class="info-heading">Car Info</h1>`).append(loader);
 
   console.log(id);
+
+  console.log(car_make);
+  console.log(car_model);
+  console.log(car_year);
 
   const response = await fetch(`/api/v1/user/${id}`, {
     method: 'PUT',
