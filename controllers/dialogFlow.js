@@ -11,12 +11,11 @@ exports.sendToDF = catchAsync(async (req, res, next) => {
                 'Content-Type': 'application/json',
                 'apiKeyStr': process.env.API_KEY
             }
-        }
-    )
+        })
         .then(result => result.json())
         .then(data => {
-            console.log(data.intentResponse.queryResult.intent.displayName);
-            console.log(data.intentResponse.queryResult);
+            //console.log(data.intentResponse.queryResult.intent.displayName);
+            //console.log(data.intentResponse.queryResult);
 
             const response = data.intentResponse.queryResult.fulfillmentText;
             const context = data.intentResponse.queryResult.outputContexts;

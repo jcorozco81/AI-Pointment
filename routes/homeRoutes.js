@@ -6,22 +6,20 @@ const withAuth = require('../utils/auth');
 
 
 router.get('/', async (req, res) => {
-    if (!req.session.loggedIn) {
+  if (!req.session.loggedIn) {
     res.redirect('/login');
-  } else{
-      res.render('landing',{
+  } else {
+    res.render('landing', {
       loggedIn: req.session.loggedIn
     });
   }
-  
 });
 
 
 router.get('/profile', withAuth, async (req, res) => {
   try {
-
     // Find the logged in user based on the session ID
-    
+
     const userData = await User.findByPk(req.session.userid);
 
     const user = userData.get({ plain: true });
@@ -37,23 +35,23 @@ router.get('/profile', withAuth, async (req, res) => {
 });
 
 
-  router.get('/signup', async (req, res) => {
-    res.render('signup');
-  });
+router.get('/signup', async (req, res) => {
+  res.render('signup');
+});
 
-  router.get('/confirmation', async (req, res) => {
-    res.render('confirmation');
-  });
+router.get('/confirmation', async (req, res) => {
+  res.render('confirmation');
+});
 
-  router.get('/login', async (req, res) => {
-    res.render('login');
-  });
-
-
+router.get('/login', async (req, res) => {
+  res.render('login');
+});
 
 
 
-  
+
+
+
 
 router.get('/message-test', async (req, res) => {
   res.render('messageTest');
@@ -79,10 +77,10 @@ module.exports = router;
 //     try {
 //       // Find the logged in user based on the session ID
 //       const userData = await User.findByPk(1);
-  
+
 //       const user = userData.get({ plain: true });
 //       console.log(user);
-  
+
 //       res.render('profile', {
 //         ...user});
 //     } catch (err) {
@@ -110,7 +108,7 @@ module.exports = router;
 
 
 
-  
+
 
 // router.get('/message-test', async (req, res) => {
 //   res.render('messageTest');
