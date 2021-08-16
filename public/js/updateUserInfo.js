@@ -120,3 +120,20 @@ window.onload = function () {
     .addEventListener("click", updateCarInfo);
 }
 
+
+let userId = $('#update').attr('user-id');
+console.log(userId);
+fetch(`/api/v1/slots/by-user/${userId}`)
+  .then(data => data.json())
+  .then(data => {
+    console.log(data)
+    if (data.length > 0) {
+      $('#apts').empty();
+      data.forEach(el => {
+        const str = `<div class="appointment-slot"><h2 class="apt-date">${el.date}</h2><h3 class="apt-time">${el.timeid.timestring}-${parseInt(el.timeid.timestring) + 1}:00</h3><h4 class="apt-service">${el.service.name}</h4></div>`;
+        console.log(el);
+        console.log(str);
+        $('#apts').append(str);
+      })
+    }
+  })
