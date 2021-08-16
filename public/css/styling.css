@@ -1,0 +1,285 @@
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0;
+}
+
+nav {
+    height: 60px !important;
+    border-bottom: 1px solid #dbdbdb;
+    overflow: hidden;
+    box-shadow: none !important;
+    position: fixed;
+    z-index: 999;
+}
+
+form {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.background {
+    background-color: #fbfbfb;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+}
+
+.background-grid {
+    background-color: #fbfbfb;
+    width: 100vw;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+}
+
+.message-box {
+    height: 670px;
+    width: 580px;
+    background: #ffffff;
+    border: 1px solid #dbdbdb;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column;
+    align-items: stretch;
+    z-index: 800;
+}
+
+.top-box {
+    height: 60px;
+    border-bottom: 1px solid #dbdbdb;
+    z-index: 900;
+    padding: 1rem;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.middle-box {
+    height: 406px;
+    width: 580px;
+    border-bottom: 1px solid #dbdbdb;
+    z-index: 900;
+    display: flex;
+    flex-flow: column;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    overflow-x: hidden;
+     overflow-y:scroll;
+       -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    justify-content: flex-end;
+}
+
+.middle-box::-webkit-scrollbar {
+  display: none;
+}
+
+.bottom-box {
+    height: 204px;
+    display: flex;
+    flex-flow: column;
+    z-index: 900;
+    padding: 1rem;
+}
+
+.bottom-box:last-child {
+    align-items: flex-end;
+}
+
+.writing-box {
+    height: 120px;
+    width: 100%;
+    border: 1px solid #DBDBDB;
+    border-radius: 6px;
+    z-index: 910;
+    resize: none;
+    padding: 1rem;
+}
+
+.msg-button {
+    width: 160px;
+    height: 50px;
+    margin-top: 1rem;
+    background-color: #4AADF4 !important;
+    border-radius: 6px;
+    box-shadow: none !important;
+    border: none;
+}
+
+.msg-button:hover {
+    background-color: #4aadf4b9 !important;
+}
+
+.chat-heading {
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+.info-heading {
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+    color: #c0c0c0;
+}
+
+.chat-bot-msg {
+    margin-right: 4rem;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.cust-msg {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.text-response {
+    margin-left: 1rem;
+    border: 1px solid #DBDBDB;
+    padding: 1rem;
+    border-radius: 6px;
+    max-width: 50%;
+}
+
+.text-response-cust {
+    margin-right: 1rem;
+    border: 1px solid #DBDBDB;
+    padding: 1rem;
+    border-radius: 6px;
+    background-color: #4aadf4be;
+    max-width: 50%;
+}
+
+.face {
+    font-size: 3rem;
+}
+
+.profile {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    height: 100vh;
+    border-right: 1px solid #DBDBDB;
+    overflow-x: hidden;
+     overflow-y:scroll;
+       -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+
+.profile::-webkit-scrollbar {
+  display: none;
+}
+
+.appointments {
+    margin-top: 60px;
+    display: flex;
+    flex-flow: column;
+    align-items: stretch;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y:scroll;
+       -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.appointments::-webkit-scrollbar {
+  display: none;
+}
+
+.appointment-slot {
+    margin-top: 60px;
+    margin-left: 60px;
+    margin-right: 60px;
+    padding: 2rem;
+    border: 1px solid #DBDBDB;
+    border-radius: 10px;
+}
+
+.profile-photo {
+    margin-top: 120px;
+}
+
+.info {
+    margin-top: 60px;
+}
+
+.info-block {
+    margin-right: 1rem !important;
+    margin-top: 60px !important;
+    padding-bottom: 60px !important;
+    border-bottom: 1px solid #DBDBDB;
+}
+
+.apt-date {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.apt-time {
+    font-size: 1rem;
+    margin: 0;
+    margin-top: 0.5rem;
+    padding: 0;
+    color: #000000a4;
+}
+
+.apt-service {
+    font-size: 1.25rem;
+    margin: 0;
+    margin-top: 1rem;
+    padding: 0;
+}
+
+.info-block:last-child {
+    border-bottom: none;
+}
+
+.full-page {
+    margin: 0 !important;
+}
+
+.auth-box {
+    width: 580px;
+    min-height: 500px;
+    border: 1px solid #DBDBDB;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column;
+    padding: 5rem;
+}
+
+.login-fields {
+    margin-top: 2.5rem;
+}
+
+.info-item {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+    border: 1px solid #DBDBDB;
+    border-radius: 6px;
+}
+
+#login {
+    width: 66%;
+}
