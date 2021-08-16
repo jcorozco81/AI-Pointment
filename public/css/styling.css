@@ -69,6 +69,7 @@ form {
 
 .middle-box {
     height: 406px;
+    width: 580px;
     border-bottom: 1px solid #dbdbdb;
     z-index: 900;
     display: flex;
@@ -79,6 +80,7 @@ form {
      overflow-y:scroll;
        -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+    justify-content: flex-end;
 }
 
 .middle-box::-webkit-scrollbar {
@@ -142,10 +144,11 @@ form {
 }
 
 .cust-msg {
-    margin-left: 4rem;
     display: flex;
     flex-flow: row;
     align-items: center;
+    width: 100%;
+    justify-content: flex-end;
 }
 
 .text-response {
@@ -153,6 +156,7 @@ form {
     border: 1px solid #DBDBDB;
     padding: 1rem;
     border-radius: 6px;
+    max-width: 50%;
 }
 
 .text-response-cust {
@@ -160,6 +164,8 @@ form {
     border: 1px solid #DBDBDB;
     padding: 1rem;
     border-radius: 6px;
+    background-color: #4aadf4be;
+    max-width: 50%;
 }
 
 .face {

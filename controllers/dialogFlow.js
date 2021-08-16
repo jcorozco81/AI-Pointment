@@ -3,8 +3,9 @@ const fetch = require('node-fetch');
 const { response } = require('express');
 
 exports.sendToDF = catchAsync(async (req, res, next) => {
-    const userResponse = req.body;
-    //console.log(req.body);
+    let userResponse = req.body;
+    userResponse.sessionId = req.sessionID;
+    console.log(userResponse);
     fetch('https://ai-pointment.ethanharsh.com/',
         {
             method: 'POST', body: JSON.stringify(userResponse), headers: {
@@ -15,7 +16,7 @@ exports.sendToDF = catchAsync(async (req, res, next) => {
         .then(result => result.json())
         .then(data => {
             //console.log(data.intentResponse.queryResult.intent.displayName);
-            //console.log(data.intentResponse.queryResult);
+            //console.log(data);
 
             const response = data.intentResponse.queryResult.fulfillmentText;
             const context = data.intentResponse.queryResult.outputContexts;
