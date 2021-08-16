@@ -254,7 +254,7 @@ form {
 
 .auth-box {
     width: 580px;
-    height: 500px;
+    min-height: 500px;
     border: 1px solid #DBDBDB;
     border-radius: 10px;
     display: flex;
