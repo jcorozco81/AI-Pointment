@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
   if (!req.session.loggedIn) {
     res.redirect('/login');
   } else {
-    res.render('landing', {
+    res.render('message', {
       loggedIn: req.session.loggedIn
     });
   }
@@ -25,7 +25,7 @@ router.get('/profile', withAuth, async (req, res) => {
     const user = userData.get({ plain: true });
     console.log(user);
 
-    res.render('profile', {
+    res.render('profilePage', {
       ...user,
       loggedIn: req.session.loggedIn
     });
