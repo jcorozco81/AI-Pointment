@@ -4,7 +4,7 @@ const { response } = require('express');
 
 exports.sendToDF = catchAsync(async (req, res, next) => {
     let userResponse = req.body;
-    userResponse.sessionId = req.sessionID;
+    userResponse.sessionId = req.session.userid;
     console.log(userResponse);
     fetch('https://ai-pointment.ethanharsh.com/',
         {

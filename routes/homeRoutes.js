@@ -1,6 +1,6 @@
 const router = require('express').Router();
 // const userControllerRoute = require('../controllers/user');
-const { User } = require('../models');
+const { User, Slots } = require('../models');
 const withAuth = require('../utils/auth');
 
 
@@ -18,17 +18,22 @@ router.get('/', async (req, res) => {
 
 router.get('/profile', withAuth, async (req, res) => {
   try {
+
     // Find the logged in user based on the session ID
+    //console.log(req.session.userid)
+    const userData = await User.findByPk(req.session.userid,
+      {
+        attributes: { exclude: ['password'] },
+        include: Slots
+      }
+    );
 
-    const userData = await User.findByPk(req.session.userid);
-
-    const user = userData.get({ plain: true });
-    console.log(user);
-
+    // console.log(userData.slots.length);
     res.render('profilePage', {
-      ...user,
+      ...userData.dataValues,
       loggedIn: req.session.loggedIn
     });
+
   } catch (err) {
     res.status(500).json(err);
   }
