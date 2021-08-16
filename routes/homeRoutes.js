@@ -36,7 +36,7 @@ router.get('/profile', withAuth, async (req, res) => {
 
 
 router.get('/signup', async (req, res) => {
-  res.render('signup');
+  res.render('signupPage');
 });
 
 router.get('/confirmation', async (req, res) => {
@@ -44,7 +44,7 @@ router.get('/confirmation', async (req, res) => {
 });
 
 router.get('/login', async (req, res) => {
-  res.render('login');
+  res.render('loginPage');
 });
 
 
