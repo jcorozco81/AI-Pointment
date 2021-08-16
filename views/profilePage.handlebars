@@ -6,7 +6,22 @@
                     <i class="large material-icons face">account_circle</i>
                 </div>
                 <div class="info col s12">
-                    <div class="row info-block">
+                    <div class="row info-block" id="user-info">
+                        <h1 class="info-heading">User Info</h1>
+                        <div>
+                            <div class="info-item">{{ first_name}}</div>
+                            <div class="info-item">{{ last_name }}</div>
+                            <div class="info-item">{{ phone }}</div>
+                            <div class="info-item">{{ address }}</div>
+                        </div>
+                    </div>
+                    <div class="row info-block" id="car-info">
+                        <h1 class="info-heading">Car Info</h1>
+                        <div class="info-item">{{ car_make }}</div>
+                        <div class="info-item">{{ car_model }}</div>
+                        <div class="info-item">{{ car_year }}</div>
+                    </div>
+                    <div class="row info-block" id="user-update">
                         <h1 class="info-heading">User Info</h1>
                         <form class="col s12">
                             <div class="row">
@@ -31,10 +46,11 @@
                                     <label class="black-text" for="address">Address</label>
                                 </div>
                             </div>
-                            <button class="transparent msg-button btn  white-text right" id="update">Update</button>
+                            <button class="transparent msg-button btn  white-text right" id="update"
+                                user-id="{{id}}">Update</button>
                         </form>
                     </div>
-                    <div class="row info-block">
+                    <div class="row info-block" id="car-update">
                         <h1 class="info-heading">Car Info</h1>
                         <form class="col s12">
                             <div class="row">
@@ -55,8 +71,8 @@
                                     <label class="black-text" for="phone">Year</label>
                                 </div>
                             </div>
-                            <button class="transparent msg-button btn  white-text right"
-                                id="#update-car">Update</button>
+                            <button class="transparent msg-button btn  white-text right" id="update-car"
+                                user-id="{{id}}">Update</button>
                         </form>
                     </div>
                 </div>
@@ -72,4 +88,6 @@
     </div>
 </main>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="../js/updateUserInfo.js"></script>

@@ -37,20 +37,14 @@ exports.getUser = catchAsync(async (req, res) => {
 
 //   Modify user
 exports.putUser = catchAsync(async (req, res) => {
-  try {
-    const userData = await User.update(req.body, {
-      where: {
-        id: req.params.id,
-      },
-    });
-    res.status(200).json(userData);
-    if (!userData) {
-      res.status(400).json({ message: 'User not found' });
-    }
-
-  } catch (err) {
-    res.status(500).json(err);
-  }
+  //onsole.log(req.body);
+  const userData = await User.update(req.body, {
+    where: {
+      id: req.params.id,
+    },
+  });
+  //console.log(userData);
+  res.status(200).json(userData);
 });
 
 

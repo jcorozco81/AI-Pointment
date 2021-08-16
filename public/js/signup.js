@@ -33,7 +33,7 @@ const signupFormHandler = async (event) => {
 window.onload = function () {
   console.log("loaded function signup");
   document
-    .querySelector(".signup-form")
+    .querySelector("#signup")
     .addEventListener("click", signupFormHandler);
 }
 
